@@ -1,0 +1,23 @@
+{
+  "name": "amphora-storybook",
+  "version": "0.0.0",
+  "description": "Renderer for viewing, validating, and playing with Clay components and layouts",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "amphora",
+    "clay",
+    "kiln",
+    "clay-kiln"
+  ],
+  "author": "Chris Pachomski",
+  "license": "MIT",
+  "dependencies": {
+    "clay-log": "^1.3.1",
+    "clayutils": "^2.6.2",
+    "handlebars": "^4.1.2",
+    "js-yaml": "^3.13.1"
+  }
+}
