@@ -13,7 +13,7 @@
     "clay-kiln"
   ],
   "author": "Chris Pachomski",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "clay-log": "^1.3.1",
     "clayhandlebars": "^3.3.0",
