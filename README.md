@@ -1,5 +1,9 @@
 # Amphora Biscuits
 
+<img src="https://desa.pl/media/img/cms/auction_objects/48844/95c5d8f1da8ff888146754748845d88c.jpg"
+     alt="Teddy K"
+     style="float: left; margin-right: 10px;" />
+
 A Biscuit renderer for Clay components to develop and test them in an isolated page/context.
 
 ## Install
