@@ -15,5 +15,8 @@
   <body>
 	  {{> (lookup . 'partialName') data }}
 	  {{{scripts}}}
+	   <script>
+    		{{{ read 'node_modules/clay-kiln/dist/clay-kiln-storybook.js' }}}
+  		</script>
   </body>
 </html>
