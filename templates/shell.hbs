@@ -27,9 +27,17 @@
 		  {{> (lookup . 'partialName') data }}
 	  </div>
 	  <div id="kiln-app"></div>
-	  {{{scripts}}}
+	   <script>
+			{{{ read 'public/js/_prelude.js' }}}
+    		{{{ read 'public/js/_client-init.js' }}}
+  		</script>
+		<script>
+    		{{{ read 'public/js/_postlude.js' }}}
+  		</script>
+	  	{{{scripts}}}
 	   <script>
     		{{{ read 'node_modules/clay-kiln/dist/clay-kiln-storybook.js' }}}
   		</script>
   </body>
 </html>
+
