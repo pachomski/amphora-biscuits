@@ -39,8 +39,8 @@ return amphora({
   app: app,
   renderers: {
     html: amphoraHtml,
-	default: 'html'
-	biscuits: amphoraBiscuits
+    default: 'html'
+    biscuits: amphoraBiscuits
   },
   providers: ['apikey', amphoraProvider],
   sessionStore: redisStore,
