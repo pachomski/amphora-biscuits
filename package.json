@@ -1,7 +1,7 @@
 {
-  "name": "amphora-storybook",
+  "name": "amphora-biscuits",
   "version": "0.0.0",
-  "description": "Renderer for viewing, validating, and playing with Clay components and layouts",
+  "description": "Renderer for viewing, validating, and playing with Clay components and layouts in an isloated environment",
   "main": "index.js",
   "scripts": {
     "test": "npm run test"
