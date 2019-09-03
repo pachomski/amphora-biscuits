@@ -1,4 +1,5 @@
 # Amphora Biscuits
+*biscuit (n): Biscuit is any pottery that has been fired in a kiln without a ceramic glaze. This can be a final product such as biscuit porcelain, or unglazed earthenware, often called terracotta, or, most commonly, an intermediary stage in a glazed final product.* 
 
 <img src="https://desa.pl/media/img/cms/auction_objects/48844/95c5d8f1da8ff888146754748845d88c.jpg"
      alt="Teddy K"
@@ -11,6 +12,13 @@ A Biscuit renderer for Clay components to develop and test them in an isolated p
 `$ npm install --save amphora-biscuits`
 
 ## Integration
+
+### **PRE RELEASE** Clay-Kiln installation
+To get the required, currently in development `clay-kiln-biscuits.js`:
+* Pull `https://github.com/pachomski/clay-kiln#biscuits` locally
+* cd into it and run `npm i && npm run build` to create `clay-kiln-biscuits.js`
+* Within your `cnn-content-hub/app`, run `npm install ../path/to/clay-kiln-biscuits`
+* Nice!
 
 ### Basic Configuration
 
