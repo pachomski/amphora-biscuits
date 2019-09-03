@@ -48,6 +48,8 @@ return amphora({
 });
 ```
 
+Biscuits will are now accessible at `/_components/:name/instances/instance-uri.biscuit`
+
 ## Contributing
 
 Want a feature or find a bug? Create an issue or a PR and someone will get on it.
