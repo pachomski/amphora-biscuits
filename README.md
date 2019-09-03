@@ -40,7 +40,7 @@ return amphora({
   renderers: {
     html: amphoraHtml,
     default: 'html'
-    biscuits: amphoraBiscuits
+    biscuit: amphoraBiscuits
   },
   providers: ['apikey', amphoraProvider],
   sessionStore: redisStore,
