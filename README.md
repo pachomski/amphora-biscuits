@@ -12,6 +12,13 @@ A Biscuit renderer for Clay components to develop and test them in an isolated p
 
 ## Integration
 
+### **PRE RELEASE** Clay-Kiln installation
+To get the required, currently in development `clay-kiln-biscuits.js`:
+* Pull `https://github.com/pachomski/clay-kiln#biscuits` locally
+* cd into it and run `npm i && npm run build` to create `clay-kiln-biscuits.js`
+* Within your `cnn-content-hub/app`, run `npm install ../path/to/clay-kiln-biscuits`
+* Nice!
+
 ### Basic Configuration
 
 First, ensure that you have a compatible version of Amphora installed (v3.x or greater) and require `amphora-biscuits` wherever you are configuring your `amphora` renderers.
