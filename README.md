@@ -1,4 +1,5 @@
 # Amphora Biscuits
+*biscuit (n): Biscuit is any pottery that has been fired in a kiln without a ceramic glaze. This can be a final product such as biscuit porcelain, or unglazed earthenware, often called terracotta, or, most commonly, an intermediary stage in a glazed final product.* 
 
 <img src="https://desa.pl/media/img/cms/auction_objects/48844/95c5d8f1da8ff888146754748845d88c.jpg"
      alt="Teddy K"
