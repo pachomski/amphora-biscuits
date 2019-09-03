@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<style>
+		
 		body {
 			margin: 0;
 			padding: 0;
@@ -24,13 +25,33 @@
 	</style>
   </head>
   <body>
-	  <div class="story">
-		  {{> (lookup . 'partialName') data }}
-	  </div>
-	  <div id="kiln-app"></div>
-	   {{{scripts}}}
-	   <script>
-    		{{{ read 'node_modules/clay-kiln/dist/clay-kiln-storybook.js' }}}
-  		</script>
+	<div class="story">
+		{{> (lookup . 'partialName') state }}
+	</div>
+	<div class="clay-kiln">
+		<div id="kiln-app"></div>
+	</div>
+	<script>
+		// scaffold kiln for preloading (models, hbs templates, schemae, data, locals)
+		window.kiln = window.kiln || {}
+		window.kiln.componentModels = window.kiln.componentModels || {};
+		window.kiln.componentTemplates = window.kiln.componentTemplates || {};
+		window.kiln.preloadSchemas = window.kiln.preloadSchemas || {};
+
+		{{#each state._componentSchemas}}
+        window.kiln.preloadSchemas['{{ this.name }}'] = {{{stringify (yaml (read this.schema)) }}};
+		{{/each}}
+		
+		window.kiln.preloadData = {{{ default (replace (stringify @root) '</script>' '<"+"/script>') '{}' }}};
+        window.kiln.locals = {{{ default (stringify state.locals) '{}' }}};
+
+		// add the environment variables for model.js
+        window.process = window.process || {};
+        window.process.env = {{{ default (stringify state._envVars) '{}' }}};
+	</script>
+	{{{scripts}}}
+	<script>
+    	{{{ read 'node_modules/clay-kiln/dist/clay-kiln-storybook.js' }}}
+  	</script>
   </body>
 </html>
