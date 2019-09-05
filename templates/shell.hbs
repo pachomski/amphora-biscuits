@@ -45,7 +45,6 @@
 
 
 		window.kiln.componentData = {{{ default (replace (stringify @root) '</script>' '<"+"/script>') '{}' }}}
-		window.kiln.preloadData = {{{ default (replace (stringify @root) '</script>' '<"+"/script>') '{}' }}};
         window.kiln.locals = {{{ default (stringify state.locals) '{}' }}};
 
 		// add the environment variables for model.js
