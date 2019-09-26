@@ -13,7 +13,7 @@
 
 		.story {
 			margin: 100px auto;
-			max-width: 768px;
+			max-width: 980px;
 			padding: 15px;
 		}
 	</style>
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700"></link>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
 	<style>
-		{{{ read 'node_modules/clay-kiln/dist/clay-kiln-storybook.css' }}}
+		{{{ read 'node_modules/clay-kiln/dist/clay-kiln-biscuits.css' }}}
 	</style>
   </head>
   <body>
@@ -34,10 +34,12 @@
 	<script>
 		// scaffold kiln for preloading (models, hbs templates, schemae, data, locals)
 		window.kiln = window.kiln || {}
+        window.kiln.componentList = {{{ default (stringify state.locals.components) '[]' }}};
 		window.kiln.componentModels = window.kiln.componentModels || {};
 		window.kiln.componentData = window.kiln.componentData || {};
 		window.kiln.componentTemplates = window.kiln.componentTemplates || {};
 		window.kiln.preloadSchemas = window.kiln.preloadSchemas || {};
+		window.kiln.selectorButtons = window.kiln.selectorButtons || {};
 
 		{{#each state._componentSchemas}}
         window.kiln.preloadSchemas['{{ this.name }}'] = {{{stringify (yaml (read this.schema)) }}};
@@ -45,15 +47,14 @@
 
 
 		window.kiln.componentData = {{{ default (replace (stringify @root) '</script>' '<"+"/script>') '{}' }}}
-        window.kiln.locals = {{{ default (stringify state.locals) '{}' }}};
 
 		// add the environment variables for model.js
         window.process = window.process || {};
         window.process.env = {{{ default (stringify state._envVars) '{}' }}};
 	</script>
-	{{#each scripts}}
+	{{!-- {{#each scripts}}
 		<script type="text/javascript" src="{{this}}"></script>
-	{{/each}}
+	{{/each}} --}}
 	<script>
     	{{{ read 'node_modules/clay-kiln/dist/clay-kiln-biscuits.js' }}}
   	</script>
