@@ -34,12 +34,9 @@
 		// scaffold kiln for preloading (models, hbs templates, schemae, data, locals)
 		window.kiln = window.kiln || {}
 		window.kiln.biscuits = {{{ default (stringify state.biscuits) '{}' }}};
-        window.kiln.componentList = {{{ default (stringify state.locals.components) '[]' }}};
-		window.kiln.componentModels = window.kiln.componentModels || {};
-		window.kiln.componentData = window.kiln.componentData || {};
+		window.kiln.initialBiscuit = {{{ default (stringify state.initialBiscuit) '{}' }}};
 		window.kiln.componentTemplates = window.kiln.componentTemplates || {};
 		window.kiln.preloadSchemas = window.kiln.preloadSchemas || {};
-		window.kiln.selectorButtons = window.kiln.selectorButtons || {};
 
 		{{#each state._componentSchemas}}
         window.kiln.preloadSchemas['{{ this.name }}'] = {{{stringify (yaml (read this.schema)) }}};
