@@ -56,7 +56,7 @@ return amphora({
 });
 ```
 
-Biscuits will are now accessible at `/_components/:name/instances/instance-uri.biscuit`
+Biscuits will are now accessible at `/_components/:name/instances/instance-uri.biscuit` or `/_components/:name.biscuit`
 
 ## Contributing
 
