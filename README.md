@@ -14,7 +14,7 @@ A Biscuit renderer for Clay components to develop and test them in an isolated p
 ## Integration
 
 ### **PRE RELEASE** Clay-Kiln installation
-To get the required `clay-kiln-biscuits.js` and `clay-kiln-biscuits.css` into your build, you will need to use an extended `clay-kiln` branch found here: `https://github.com/pachomski/clay-kiln#biscuits`. You should install it in your clay node app with `npm i https://github.com/pachomski/clay-kiln#biscuits'`.
+To get the required `clay-kiln-biscuits.js` and `clay-kiln-biscuits.css` into your build, you will need to use an extended `clay-kiln` branch found here: `https://github.com/pachomski/clay-kiln#biscuits`. You should install it in your clay node app with `npm i https://github.com/pachomski/clay-kiln#biscuits`.
 
 ### Basic Configuration
 
