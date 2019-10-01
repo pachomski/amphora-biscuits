@@ -14,11 +14,7 @@ A Biscuit renderer for Clay components to develop and test them in an isolated p
 ## Integration
 
 ### **PRE RELEASE** Clay-Kiln installation
-To get the required, currently in development `clay-kiln-biscuits.js`:
-* Pull `https://github.com/pachomski/clay-kiln#biscuits` locally
-* cd into it and run `npm i && npm run build` to create `clay-kiln-biscuits.js`
-* Within your `cnn-content-hub/app`, run `npm install ../path/to/clay-kiln-biscuits`
-* Nice!
+To get the required `clay-kiln-biscuits.js` and `clay-kiln-biscuits.css` into your build, you will need to use an extended `clay-kiln` branch found here: `https://github.com/pachomski/clay-kiln#biscuits`. You should install it in your clay node app with `npm i https://github.com/pachomski/clay-kiln#biscuits'.
 
 ### Basic Configuration
 
@@ -36,9 +32,21 @@ If your templates require any .css or .js files (which they most likely do), you
 
 const resolveMedia = require('../path/to/media-resolve-fn);
 
-// Register mediaService callback with amphoraBiscuits
-amphoraBiscuits.addResolveMedia(resolveMedia)
+/* Register mediaService callback with amphoraBiscuits */
+amphoraBiscuits.addResolveMedia(resolveMedia) // Currently uses the same resolveMedia function as amphora-html
 ```
+
+### resolveMedia
+
+Will receive a mediaMap object: `{ scripts: [], styles: [] }` as well as the request `locals` object as its two arguments. This is your chance to mutate the respective `scripts` and `styles` properties as necessary for rendering + server-side processing.
+
+#### Params
+
+* `mediaMap` _object_
+* `locals` _object_
+
+**Returns** _undefined_
+
 
 ### Register Amphora Biscuits with your Amphora Instance
 
