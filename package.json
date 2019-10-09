@@ -1,6 +1,6 @@
 {
-  "name": "amphora-biscuits",
-  "version": "0.0.0",
+  "name": "@cnnprivate/amphora-biscuits",
+  "version": "0.0.0-cnn.0",
   "description": "Renderer for viewing, validating, and playing with Clay components and layouts in an isloated environment",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,10 @@
   "author": "Chris Pachomski",
   "license": "UNLICENSED",
   "dependencies": {
-    "clay-log": "^1.3.1",
-    "clayhandlebars": "^3.3.0",
-    "clayutils": "^2.6.2",
+    "@cnnprivate/clay-log": "^1.3.1-cnn.0",
+    "@cnnprivate/clayhandlebars": "^3.3.1-cnn.1",
+    "@cnnprivate/clayutils": "^2.6.3-cnn.0",
     "glob": "^7.1.4",
-    "handlebars": "^4.1.2",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
     "nymag-fs": "^1.0.1"
